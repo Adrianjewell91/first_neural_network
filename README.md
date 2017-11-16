@@ -7,3 +7,9 @@ The math behind how a neural network does this is rather complicated and not in 
 
 This is the result of my following of a tutorial (https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/), and also after being motivated to build a network. 
 
+Some key things to keep in mind.
+
+1. You need to set up Python 3, Anaconda, and all of the dependencies.  The `versions.py` and `deepversions.py` are there for you verify that you have all of them. 
+
+2. I split the data set, into training and validation. Not hard, just a minor modification of the code. 
+
