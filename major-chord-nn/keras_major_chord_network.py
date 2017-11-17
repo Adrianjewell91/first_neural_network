@@ -31,4 +31,7 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 model.fit(X,Y_train, epochs=150, batch_size=4)
 
 scores = model.evaluate(X,Y_train)
+
+print ("Evaluation of the network using the test version")
+
 print("\n%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
