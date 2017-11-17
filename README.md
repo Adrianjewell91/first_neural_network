@@ -10,6 +10,12 @@ Instructions:
 3. Make sure the `deepversions.py` and `versions.py` show the versions.
 4. `python keras_major_chord_network.py` to see it run.
 
+Differences between first_nn and major-chords
+1. `first-nn` is simply outputting yes or no, while `major-chord-nn` is outputting the likelihood of the input data being any one of the 12 chord names. So, it outputs 12 values, those values being probabilities that sum to one. To achieve this, the softmax function is applied to the output values in `major-chord-nn`.
+2. To accomodate for the increased complexity of the `major-chord` dataset, a filter is applied to the training set before passing it into the neural network.
+  ex. If the chord is a A chord, the value is 9, but this actually needs to look like this: [0,0,0,0,0,0,0,0,0,9,0,0]. 
+
+
 Next Steps:
 1. Develop the data set to include inversions and create a validation set.
 
