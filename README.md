@@ -1,4 +1,4 @@
-# A simple neural network, based on a tutorial
+# A simple neural network for musical information analysis.
 
 ## major-chord-nn
 
