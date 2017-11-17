@@ -1,4 +1,6 @@
-### A simple neural network, based on a tutorial
+# A simple neural network, based on a tutorial
+
+## major-chord-nn
 
 `major-chord` is an expansion upon a tutorial (listed below). I built my own dataset of major chords (all root position), and trained a network to accurately predict the chord name from a root position major chord played at any location on the piano. See `build-major-chord-set.py` for explanation of how I built it, and how I am representing major chords.
 
@@ -9,8 +11,9 @@ Instructions:
 4. `python keras_major_chord_network.py` to see it run.
 
 Next Steps:
-1. Develop the data set to include inversions and create a validation set. 
+1. Develop the data set to include inversions and create a validation set.
 
+## /first-nn
 
 A neural network learns to predict outcomes given a set of data, in which the set of data includes the inputs and their expected outputs. The neural network then decides the importance of each input such that, given a new set of data, the outputs will match the expected outputs. In this way, the neural network has 'learned' to answer questions.
 
