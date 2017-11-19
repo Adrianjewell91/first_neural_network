@@ -2,7 +2,7 @@
 
 ## major-chord-nn
 
-`major-chord` is an expansion upon a tutorial (listed below). I built my own dataset of major chords (all root position), and trained a network to accurately predict the chord name from a root position major chord played at any location on the piano. See `build-major-chord-set.py` for explanation of how I built it, and how I am representing major chords.
+`major-chord` is an expansion upon a tutorial (listed below). I built my own dataset of major chords (all root position), and trained a network to accurately predict the chord name from a root position major chord played at any location on the piano. It's pretty simple dataset, and I'm currently in the works for building a more comprehensive data set (and more to come), but the main idea is there. See `build-major-chord-set.py` for explanation of how I built it, and how I am representing major chords.
 
 Instructions:
 1. Clone the repo.
@@ -13,7 +13,7 @@ Instructions:
 Differences between first_nn and major-chords
 1. `first-nn` is simply outputting yes or no, while `major-chord-nn` is outputting the likelihood of the input data being any one of the 12 chord names. So, it outputs 12 values, those values being probabilities that sum to one. To achieve this, the softmax function is applied to the output values in `major-chord-nn`.
 2. To accomodate for the increased complexity of the `major-chord` dataset, a filter is applied to the training set before passing it into the neural network.
-  ex. If the chord is a A chord, the value is 9, but this actually needs to look like this: [0,0,0,0,0,0,0,0,0,9,0,0]. 
+  ex. If the chord is a A chord, the value is 9, but this actually needs to look like this: [0,0,0,0,0,0,0,0,0,9,0,0].
 
 
 Next Steps:

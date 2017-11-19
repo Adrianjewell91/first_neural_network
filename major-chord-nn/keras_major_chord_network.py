@@ -28,7 +28,7 @@ model.add(Dense(12, activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 #fit the model
-model.fit(X,Y_train, epochs=150, batch_size=4)
+model.fit(X,Y_train, epochs=50, batch_size=4)
 
 scores = model.evaluate(X,Y_train)
 
