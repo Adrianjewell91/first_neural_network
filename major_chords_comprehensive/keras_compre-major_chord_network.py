@@ -14,9 +14,10 @@ Y = dataset[:,88]
 from keras.utils import to_categorical
 Y_train = to_categorical(Y)
 
-validate_dataset = numpy.loadtxt("major-chords-compre-set-validate.csv", delimiter=",")
-X_validate = dataset[:,0:88]
-Y_validate = dataset[:,88]
+# validate_dataset = numpy.loadtxt("major-chords-compre-set-validate.csv", delimiter=",")
+validate_dataset = numpy.loadtxt("test.csv", delimiter=",")
+X_validate = validate_dataset[:,0:88]
+Y_validate = validate_dataset[:,88]
 
 Y_train_validate = to_categorical(Y_validate)
 
@@ -30,10 +31,11 @@ model.add(Dense(12, activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 #fit the model
-model.fit(X,Y_train, epochs=50, batch_size=4)
+model.fit(X,Y_train, epochs=20, batch_size=4)
 
-scores = model.evaluate(X_validate,Y_train_validate)
+scores = model.evaluate(X_validate,Y_train_validate, verbose=1)
 
 print ("Evaluation of the network using the test version")
 
 print("\n%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
+print(model.predict(X_validate))
