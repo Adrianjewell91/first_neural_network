@@ -34,3 +34,7 @@ random.shuffle(lines)
 open('major-chords-set-train.csv','w').writelines(lines)
 
 #now, go in and remove the brackets.
+import random
+validate_lines = open('major-chords-set-train.csv').readlines()
+random.shuffle(validate_lines)
+open('major-chords-set-validate.csv','w').writelines(validate_lines)
