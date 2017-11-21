@@ -2,10 +2,11 @@ from keras.models import Sequential
 from keras.layers import Dense
 import numpy
 # fix random seed for reproducibility
+#this line makes sure that theta values are randomized to same value for every run.
+#It is not a necessary line. - should ask the tutorial writer about it.
 numpy.random.seed(88)
 
-# load pima indians dataset
-dataset = numpy.loadtxt("major-chords-set-train.csv", delimiter=",")
+dataset = numpy.loadtxt("major-chords-compre-set-train.csv", delimiter=",")
 # split into input (X) and output (Y) variables
 X = dataset[:,0:88]
 Y = dataset[:,88]
@@ -13,7 +14,7 @@ Y = dataset[:,88]
 from keras.utils import to_categorical
 Y_train = to_categorical(Y)
 
-validate_dataset = numpy.loadtxt("major-chords-set-validate.csv", delimiter=",")
+validate_dataset = numpy.loadtxt("major-chords-compre-set-validate.csv", delimiter=",")
 X_validate = dataset[:,0:88]
 Y_validate = dataset[:,88]
 
