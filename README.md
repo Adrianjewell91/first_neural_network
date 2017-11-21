@@ -2,7 +2,7 @@
 
 ## major-chord-comprehensive
 
-This NN builds upon major chords. In this NN, I've built a comprehensive validate_dataset off all major chords and their inversions (first and second).
+This NN builds upon `major chords-nn`. In this NN, I've built a comprehensive validate_dataset off all major chords and their inversions (first and second).
 Then, I built a custom validation set using unusual combinations of notes, but still are major chords (Currently building this validation set out more).
 
 Instructions:
