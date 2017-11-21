@@ -1,5 +1,18 @@
 # A simple neural network for musical information analysis.
 
+## major-chord-comprehensive
+
+This NN builds upon major chords. In this NN, I've built a comprehensive validate_dataset off all major chords and their inversions (first and second).
+Then, I built a custom validation set using unusual combinations of notes, but still are major chords (Currently building this validation set out more).
+
+Instructions:
+
+1. Clone repo
+2. Install dependencies (see tutorials below)
+3. 'python build-compre-major-chord-set.py'
+4. 'python keras-compre-major_chord_network'
+5. You should see the outputs for the validation set at the bottom. The numbers represent the prediction that the input value is that chord name.
+
 ## major-chord-nn
 
 `major-chord` is an expansion upon a tutorial (listed below). I built my own dataset of major chords (all root position), and trained a network to accurately predict the chord name from a root position major chord played at any location on the piano. It's pretty simple dataset, and I'm currently in the works for building a more comprehensive data set (and more to come), but the main idea is there. See `build-major-chord-set.py` for explanation of how I built it, and how I am representing major chords.
