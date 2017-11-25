@@ -24,7 +24,7 @@ Y_train_validate = to_categorical(Y_validate)
 #create model
 model = Sequential()
 # model.add(Dense(12, input_dim=8, activation='relu'))
-model.add(Dense(40, input_dim=88, activation='sigmoid'))
+model.add(Dense(44, input_dim=88, activation='sigmoid'))
 model.add(Dense(12, activation='softmax'))
 
 # compile model
