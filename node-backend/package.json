@@ -10,8 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
     "express": "^4.16.2",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "neocortex-js": "^0.5.0"
   },
   "devDependencies": {
     "nodemon": "^1.13.3"
