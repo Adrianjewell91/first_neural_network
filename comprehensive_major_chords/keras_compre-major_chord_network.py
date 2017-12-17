@@ -39,3 +39,7 @@ print ("Evaluation of the network using the test version")
 
 print("\n%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
 print(model.predict(X_validate))
+
+model.save_weights('model.hdf5')
+with open('model.json','w') as f:
+    f.write(model.to_json())
